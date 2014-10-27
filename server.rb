@@ -16,8 +16,8 @@ class Range
 end
 
 class Dictionary < SimpleDelegator
-  WORDS = "/usr/share/dict/words".freeze
-  TOTAL = 235886
+  WORDS = File.expand_path("../words/Words/en.txt", __FILE__).freeze
+  TOTAL = 274907
 
   def initialize
     super(File.open(WORDS))
